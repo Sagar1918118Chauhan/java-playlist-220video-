@@ -1,0 +1,21 @@
+class A
+{
+    void m2()
+    {
+        System.out.println("sagar chauhan");
+    }
+}
+class B extends A
+{    @Override
+    void m1()
+    {
+        System.out.println("sagar chauhan");
+    }
+}
+
+class HelloWorld {
+    public static void main(String[] args) {
+        B r=new B();
+        r.m1();
+    }
+}
