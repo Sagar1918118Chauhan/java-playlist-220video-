@@ -1,0 +1,28 @@
+//execute both thread  aksat
+//  In multithreading  we divide a programe in two thread
+//    due to this  execution time is fast
+// main thread execute by JVM and main method have two //responsiblity 1.main method ko execute karna 2.aur jo //hamnay child class create ke the usay start karna
+class childthread extends Thread    //define a thread
+{
+    @Override
+    public void run()
+    {
+        
+        for(int i=1;i<=10;i++)
+        {
+            System.out.println("5x"+i+"="+(5*i));
+        }
+    }
+}
+class HelloWorld {
+    public static void main(String[] args) {//first thread is                                        //main method 
+        
+        childthread obj=new childthread();
+        obj.start();             //second thread start
+        
+           for(int i=1;i<=10;i++)
+        {
+            System.out.println("6x"+i+"="+(6*i));
+        }
+    }
+}
